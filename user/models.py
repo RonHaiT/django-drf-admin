@@ -35,7 +35,7 @@ class Role(models.Model):
     """
     角色表
     """
-    name = models.CharField(verbose_name='角色名称', max_length=32)
+    name = models.CharField(verbose_name='角色名称', max_length=32,unique=True)
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
     menus = models.ManyToManyField(verbose_name='拥有的菜单', to='Menu', blank=True)

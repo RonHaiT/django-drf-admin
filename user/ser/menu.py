@@ -12,7 +12,7 @@ class MenuSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = models.Menu
-        fields = ['id', 'name', 'boxicons', 'parent', 'sort', 'url', 'path', 'type', 'enable', 'btn_permission']
+        fields = ['id', 'name', 'icon', 'parent', 'sort', 'url', 'path', 'type', 'enable', 'btn_permission']
 
     extra_kwargs = {
         'name': {'required': True, 'unique': False},
